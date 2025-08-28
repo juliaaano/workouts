@@ -1,0 +1,57 @@
+MON
+chest: Bench Press 4x
+chest: Low Cable Fly 3x
+hams: Romanian Deadlift 4x | maybe 5x
+shoulders: Lateral Raise 3x (cable or dumbbells)
+triceps: Cable Triceps Pushdown 3x
+triceps: Overhead Rope Triceps Extension 3x
+calves: Smith Machine Standing Calf Raise 4x
+
+TUE
+back: Lat Pulldown 4x
+back: Seated Cable Row 3x
+quads: 45° Leg Press 4x
+shoulders: Face Pull 3x
+quads: Leg Extension 3x
+biceps: EZ-Bar Curl 3x
+biceps: Hammer Curl 3x
+
+WED
+core: Weighted Lying Crunch (arms overhead) 3x
+core: Hanging Leg Raise 3x
+core: Side Bend 2x each side (4x total)
+core: Cable Rotation 2x each side
+abd: Hip Abductor Machine 3x
+add: Hip Adductor Machine 3x
+
+THU
+chest: Bench Press 4x
+chest: Incline Bench Press 3x (dumbbell or barbell)
+hams: Seated Leg Curl 4x
+shoulders: Lateral Raise 3x (cable or dumbbells)
+triceps: Skull Crusher 3x (EZ-bar or dumbbell)
+calves: Seated Calf Raise 4x
+shoulders: Overhead Press 3x
+
+FRI
+back: Lat Pulldown 4x
+back: Chest-Supported Seated Row 3x
+quads: Seated Leg Press 3x
+shoulders: Reverse Fly (dumbbell) 3x
+quads: Leg Extension 3x
+biceps: Supinating Dumbbell Curl 3x
+
+RESERVE (in case miss a day of chest or back)
+chest: Bench Press 4x
+back: Lat Pulldown 3x
+back: Seated Cable Row 3x
+quads: Leg Press 3x
+hams: Seated Leg Curl 4x
+quads: Leg Extension 3x
+triceps: Skull Crusher 3x (EZ-bar or dumbbell)
+biceps: EZ-Bar Curl 3x
+shoulders: Lateral Raise 3x (cable or dumbbells)
+shoulders: Face Pull 3x
+calves: Seated Calf Raise 3x
+
+* If you miss an early back day (Tue), try to run this the very next day (replace Wed core) so back volume doesn’t tank.

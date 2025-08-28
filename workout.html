@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Workout Plan</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .container {
+            max-width: 100%;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .day {
+            background: white;
+            border-radius: 8px;
+            padding: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+        }
+        
+        .day:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            border-color: #007AFF;
+        }
+        
+        .day-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #007AFF;
+            margin-bottom: 8px;
+            border-bottom: 2px solid #007AFF;
+            padding-bottom: 4px;
+        }
+        
+        .exercise {
+            margin-bottom: 4px;
+            padding: 2px 0;
+        }
+        
+        .muscle-group {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .sets {
+            font-weight: bold;
+            color: #FF3B30;
+        }
+        
+        .truncated {
+            color: #999;
+            font-style: italic;
+            text-align: center;
+            margin-top: 8px;
+            padding: 4px;
+            border-top: 1px dashed #ddd;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 80%;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+        }
+        
+        .close:hover {
+            color: #000;
+        }
+        
+        .note {
+            font-style: italic;
+            color: #666;
+            font-size: 12px;
+            margin-top: 8px;
+            padding: 6px;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 8px;
+                font-size: 13px;
+            }
+            
+            .container {
+                gap: 8px;
+            }
+            
+            .day {
+                padding: 10px;
+            }
+            
+            .day-title {
+                font-size: 15px;
+            }
+            
+            .modal-content {
+                margin: 10% auto;
+                width: 95%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <div class="day" onclick="openModal('monday')">
+                <div class="day-title">Monday</div>
+                <div class="exercise"><span class="muscle-group">chest:</span> Bench Press <span class="sets">4x</span></div>
+                <div class="exercise"><span class="muscle-group">chest:</span> Low Cable Fly <span class="sets">3x</span></div>
+                <div class="exercise"><span class="muscle-group">hams:</span> Romanian Deadlift <span class="sets">4x</span> | maybe 5x</div>
+                <div class="exercise"><span class="muscle-group">shoulders:</span> Lateral Raise <span class="sets">3x</span> (cable or dumbbells)</div>
+                <div class="exercise"><span class="muscle-group">triceps:</span> Cable Triceps Pushdown <span class="sets">3x</span></div>
+                <div class="truncated">+ 2 more exercises</div>
+            </div>
+            
+            <div class="day" onclick="openModal('wednesday')">
+                <div class="day-title">Wednesday</div>
+                <div class="exercise"><span class="muscle-group">core:</span> Weighted Lying Crunch (arms overhead) <span class="sets">3x</span></div>
+                <div class="exercise"><span class="muscle-group">core:</span> Hanging Leg Raise <span class="sets">3x</span></div>
+                <div class="exercise"><span class="muscle-group">core:</span> Side Bend <span class="sets">2x</span> each side (4x total)</div>
+                <div class="exercise"><span class="muscle-group">core:</span> Cable Rotation <span class="sets">2x</span> each side</div>
+                <div class="exercise"><span class="muscle-group">abd:</span> Hip Abductor Machine <span class="sets">3x</span></div>
+                <div class="truncated">+ 1 more exercise</div>
+            </div>
+            
+            <div class="day" onclick="openModal('friday')">
+                <div class="day-title">Friday</div>
+                <div class="exercise"><span class="muscle-group">back:</span> Lat Pulldown <span class="sets">4x</span></div>
+                <div class="exercise"><span class="muscle-group">back:</span> Chest-Supported Seated Row <span class="sets">3x</span></div>
+                <div class="exercise"><span class="muscle-group">quads:</span> Seated Leg Press <span class="sets">3x</span></div>
+                <div class="exercise"><span class="muscle-group">shoulders:</span> Reverse Fly (dumbbell) <span class="sets">3x</span></div>
+                <div class="exercise"><span class="muscle-group">quads:</span> Leg Extension <span class="sets">3x</span></div>
+                <div class="truncated">+ 1 more exercise</div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="day" onclick="openModal('tuesday')">
+                <div class="day-title">Tuesday</div>
+                <div class="exercise"><span class="muscle-group">back:</span> Lat Pulldown <span class="sets">4x</span></div>
+                <div class="exercise"><span class="muscle-group">back:</span> Seated Cable Row <span class="sets">3x</span></div>
+                <div class="exercise"><span class="muscle-group">quads:</span> 45° Leg Press <span class="sets">4x</span></div>
+                <div class="exercise"><span class="muscle-group">shoulders:</span> Face Pull <span class="sets">3x</span></div>
+                <div class="exercise"><span class="muscle-group">quads:</span> Leg Extension <span class="sets">3x</span></div>
+                <div class="truncated">+ 2 more exercises</div>
+            </div>
+            
+            <div class="day" onclick="openModal('thursday')">
+                <div class="day-title">Thursday</div>
+                <div class="exercise"><span class="muscle-group">chest:</span> Bench Press <span class="sets">4x</span></div>
+                <div class="exercise"><span class="muscle-group">chest:</span> Incline Bench Press <span class="sets">3x</span> (dumbbell or barbell)</div>
+                <div class="exercise"><span class="muscle-group">hams:</span> Seated Leg Curl <span class="sets">4x</span></div>
+                <div class="exercise"><span class="muscle-group">shoulders:</span> Lateral Raise <span class="sets">3x</span> (cable or dumbbells)</div>
+                <div class="exercise"><span class="muscle-group">triceps:</span> Skull Crusher <span class="sets">3x</span> (EZ-bar or dumbbell)</div>
+                <div class="truncated">+ 2 more exercises</div>
+            </div>
+            
+            <div class="day" onclick="openModal('reserve')">
+                <div class="day-title">Reserve</div>
+                <div class="exercise"><span class="muscle-group">chest:</span> Bench Press <span class="sets">4x</span></div>
+                <div class="exercise"><span class="muscle-group">back:</span> Lat Pulldown <span class="sets">3x</span></div>
+                <div class="exercise"><span class="muscle-group">back:</span> Seated Cable Row <span class="sets">3x</span></div>
+                <div class="exercise"><span class="muscle-group">quads:</span> Leg Press <span class="sets">3x</span></div>
+                <div class="exercise"><span class="muscle-group">hams:</span> Seated Leg Curl <span class="sets">4x</span></div>
+                <div class="truncated">+ 6 more exercises</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="workoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script>
+        const workouts = {
+            monday: {
+                title: "Monday",
+                exercises: [
+                    "<span class='muscle-group'>chest:</span> Bench Press <span class='sets'>4x</span>",
+                    "<span class='muscle-group'>chest:</span> Low Cable Fly <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>hams:</span> Romanian Deadlift <span class='sets'>4x</span> | maybe 5x",
+                    "<span class='muscle-group'>shoulders:</span> Lateral Raise <span class='sets'>3x</span> (cable or dumbbells)",
+                    "<span class='muscle-group'>triceps:</span> Cable Triceps Pushdown <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>triceps:</span> Overhead Rope Triceps Extension <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>calves:</span> Smith Machine Standing Calf Raise <span class='sets'>4x</span>"
+                ]
+            },
+            tuesday: {
+                title: "Tuesday",
+                exercises: [
+                    "<span class='muscle-group'>back:</span> Lat Pulldown <span class='sets'>4x</span>",
+                    "<span class='muscle-group'>back:</span> Seated Cable Row <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>quads:</span> 45° Leg Press <span class='sets'>4x</span>",
+                    "<span class='muscle-group'>shoulders:</span> Face Pull <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>quads:</span> Leg Extension <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>biceps:</span> EZ-Bar Curl <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>biceps:</span> Hammer Curl <span class='sets'>3x</span>"
+                ]
+            },
+            wednesday: {
+                title: "Wednesday",
+                exercises: [
+                    "<span class='muscle-group'>core:</span> Weighted Lying Crunch (arms overhead) <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>core:</span> Hanging Leg Raise <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>core:</span> Side Bend <span class='sets'>2x</span> each side (4x total)",
+                    "<span class='muscle-group'>core:</span> Cable Rotation <span class='sets'>2x</span> each side",
+                    "<span class='muscle-group'>abd:</span> Hip Abductor Machine <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>add:</span> Hip Adductor Machine <span class='sets'>3x</span>"
+                ]
+            },
+            thursday: {
+                title: "Thursday",
+                exercises: [
+                    "<span class='muscle-group'>chest:</span> Bench Press <span class='sets'>4x</span>",
+                    "<span class='muscle-group'>chest:</span> Incline Bench Press <span class='sets'>3x</span> (dumbbell or barbell)",
+                    "<span class='muscle-group'>hams:</span> Seated Leg Curl <span class='sets'>4x</span>",
+                    "<span class='muscle-group'>shoulders:</span> Lateral Raise <span class='sets'>3x</span> (cable or dumbbells)",
+                    "<span class='muscle-group'>triceps:</span> Skull Crusher <span class='sets'>3x</span> (EZ-bar or dumbbell)",
+                    "<span class='muscle-group'>calves:</span> Seated Calf Raise <span class='sets'>4x</span>",
+                    "<span class='muscle-group'>shoulders:</span> Overhead Press <span class='sets'>3x</span>"
+                ]
+            },
+            friday: {
+                title: "Friday",
+                exercises: [
+                    "<span class='muscle-group'>back:</span> Lat Pulldown <span class='sets'>4x</span>",
+                    "<span class='muscle-group'>back:</span> Chest-Supported Seated Row <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>quads:</span> Seated Leg Press <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>shoulders:</span> Reverse Fly (dumbbell) <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>quads:</span> Leg Extension <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>biceps:</span> Supinating Dumbbell Curl <span class='sets'>3x</span>"
+                ]
+            },
+            reserve: {
+                title: "Reserve",
+                exercises: [
+                    "<span class='muscle-group'>chest:</span> Bench Press <span class='sets'>4x</span>",
+                    "<span class='muscle-group'>back:</span> Lat Pulldown <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>back:</span> Seated Cable Row <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>quads:</span> Leg Press <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>hams:</span> Seated Leg Curl <span class='sets'>4x</span>",
+                    "<span class='muscle-group'>quads:</span> Leg Extension <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>triceps:</span> Skull Crusher <span class='sets'>3x</span> (EZ-bar or dumbbell)",
+                    "<span class='muscle-group'>biceps:</span> EZ-Bar Curl <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>shoulders:</span> Lateral Raise <span class='sets'>3x</span> (cable or dumbbells)",
+                    "<span class='muscle-group'>shoulders:</span> Face Pull <span class='sets'>3x</span>",
+                    "<span class='muscle-group'>calves:</span> Seated Calf Raise <span class='sets'>3x</span>"
+                ],
+                note: "* If you miss an early back day (Tue), try to run this the very next day (replace Wed core) so back volume doesn't tank."
+            }
+        };
+
+        function openModal(day) {
+            const modal = document.getElementById('workoutModal');
+            const modalContent = document.getElementById('modalContent');
+            const workout = workouts[day];
+            
+            let content = `<h2 class="day-title">${workout.title}</h2>`;
+            workout.exercises.forEach(exercise => {
+                content += `<div class="exercise">${exercise}</div>`;
+            });
+            
+            if (workout.note) {
+                content += `<div class="note">${workout.note}</div>`;
+            }
+            
+            modalContent.innerHTML = content;
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('workoutModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('workoutModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
