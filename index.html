@@ -318,32 +318,39 @@
             
             modalContent.innerHTML = content;
             modal.style.display = 'block';
+            
+            // Prevent scrolling when modal is open
+            document.body.style.overflow = 'hidden';
         }
 
         function closeModal(event) {
             if (event) {
+                event.preventDefault();
                 event.stopPropagation();
+                event.stopImmediatePropagation();
             }
             document.getElementById('workoutModal').style.display = 'none';
+            document.body.style.overflow = '';
         }
 
-        // Close modal when clicking/tapping outside of it
-        window.onclick = function(event) {
-            const modal = document.getElementById('workoutModal');
-            if (event.target == modal) {
+        // Handle modal backdrop clicks/touches
+        document.getElementById('workoutModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                event.preventDefault();
                 event.stopPropagation();
-                modal.style.display = 'none';
+                event.stopImmediatePropagation();
+                closeModal();
             }
-        }
-        
-        // Touch support for mobile devices
-        window.ontouchstart = function(event) {
-            const modal = document.getElementById('workoutModal');
-            if (event.target == modal) {
+        });
+
+        document.getElementById('workoutModal').addEventListener('touchend', function(event) {
+            if (event.target === this) {
+                event.preventDefault();
                 event.stopPropagation();
-                modal.style.display = 'none';
+                event.stopImmediatePropagation();
+                closeModal();
             }
-        }
+        });
     </script>
 </body>
 </html>
