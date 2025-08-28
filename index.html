@@ -218,7 +218,7 @@
     <!-- Modal -->
     <div id="workoutModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
+            <span class="close" onclick="closeModal(event)">&times;</span>
             <div id="modalContent"></div>
         </div>
     </div>
@@ -320,7 +320,10 @@
             modal.style.display = 'block';
         }
 
-        function closeModal() {
+        function closeModal(event) {
+            if (event) {
+                event.stopPropagation();
+            }
             document.getElementById('workoutModal').style.display = 'none';
         }
 
@@ -328,6 +331,7 @@
         window.onclick = function(event) {
             const modal = document.getElementById('workoutModal');
             if (event.target == modal) {
+                event.stopPropagation();
                 modal.style.display = 'none';
             }
         }
@@ -336,6 +340,7 @@
         window.ontouchstart = function(event) {
             const modal = document.getElementById('workoutModal');
             if (event.target == modal) {
+                event.stopPropagation();
                 modal.style.display = 'none';
             }
         }
