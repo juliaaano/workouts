@@ -1,0 +1,259 @@
+{
+  "workouts": {
+    "monday": {
+      "exercises": [
+        {
+          "group": "chest",
+          "exercise": "Bench Press",
+          "sets": "4"
+        },
+        {
+          "group": "chest",
+          "exercise": "Low Cable Fly",
+          "sets": "3"
+        },
+        {
+          "group": "hams",
+          "exercise": "Romanian Deadlift",
+          "sets": "4",
+          "notes": "maybe 5x"
+        },
+        {
+          "group": "shoulders",
+          "exercise": "Lateral Raise",
+          "sets": "3",
+          "notes": "cable or dumbbells"
+        },
+        {
+          "group": "triceps",
+          "exercise": "Cable Triceps Pushdown",
+          "sets": "3"
+        },
+        {
+          "group": "triceps",
+          "exercise": "Overhead Rope Triceps Extension",
+          "sets": "3"
+        },
+        {
+          "group": "calves",
+          "exercise": "Smith Machine Standing Calf Raise",
+          "sets": "4"
+        }
+      ]
+    },
+    "tuesday": {
+      "exercises": [
+        {
+          "group": "back",
+          "exercise": "Lat Pulldown",
+          "sets": "4"
+        },
+        {
+          "group": "back",
+          "exercise": "Seated Cable Row",
+          "sets": "3x"
+        },
+        {
+          "group": "quads",
+          "exercise": "45° Leg Press",
+          "sets": "4"
+        },
+        {
+          "group": "shoulders",
+          "exercise": "Face Pull",
+          "sets": "3x"
+        },
+        {
+          "group": "quads",
+          "exercise": "Leg Extension",
+          "sets": "3x"
+        },
+        {
+          "group": "biceps",
+          "exercise": "EZ-Bar Curl",
+          "sets": "3x"
+        },
+        {
+          "group": "biceps",
+          "exercise": "Hammer Curl",
+          "sets": "3x"
+        }
+      ]
+    },
+    "wednesday": {
+      "exercises": [
+        {
+          "group": "core",
+          "exercise": "Weighted Lying Crunch",
+          "sets": "3x",
+          "notes": "arms overhead"
+        },
+        {
+          "group": "core",
+          "exercise": "Hanging Leg Raise",
+          "sets": "3x"
+        },
+        {
+          "group": "core",
+          "exercise": "Side Bend",
+          "sets": "2x each side (4x total)"
+        },
+        {
+          "group": "core",
+          "exercise": "Cable Rotation",
+          "sets": "2x each side"
+        },
+        {
+          "group": "abd",
+          "exercise": "Hip Abductor Machine",
+          "sets": "3x"
+        },
+        {
+          "group": "add",
+          "exercise": "Hip Adductor Machine",
+          "sets": "3x"
+        }
+      ]
+    },
+    "thursday": {
+      "exercises": [
+        {
+          "group": "chest",
+          "exercise": "Bench Press",
+          "sets": "4"
+        },
+        {
+          "group": "chest",
+          "exercise": "Incline Bench Press",
+          "sets": "3x",
+          "notes": "dumbbell or barbell"
+        },
+        {
+          "group": "hams",
+          "exercise": "Seated Leg Curl",
+          "sets": "4"
+        },
+        {
+          "group": "shoulders",
+          "exercise": "Lateral Raise",
+          "sets": "3x",
+          "notes": "cable or dumbbells"
+        },
+        {
+          "group": "triceps",
+          "exercise": "Skull Crusher",
+          "sets": "3x",
+          "notes": "EZ-bar or dumbbell"
+        },
+        {
+          "group": "calves",
+          "exercise": "Seated Calf Raise",
+          "sets": "4"
+        },
+        {
+          "group": "shoulders",
+          "exercise": "Overhead Press",
+          "sets": "3x"
+        }
+      ]
+    },
+    "friday": {
+      "exercises": [
+        {
+          "group": "back",
+          "exercise": "Lat Pulldown",
+          "sets": "4"
+        },
+        {
+          "group": "back",
+          "exercise": "Chest-Supported Seated Row",
+          "sets": "3x"
+        },
+        {
+          "group": "quads",
+          "exercise": "Seated Leg Press",
+          "sets": "3x"
+        },
+        {
+          "group": "shoulders",
+          "exercise": "Reverse Fly",
+          "sets": "3x",
+          "notes": "dumbbell"
+        },
+        {
+          "group": "quads",
+          "exercise": "Leg Extension",
+          "sets": "3x"
+        },
+        {
+          "group": "biceps",
+          "exercise": "Supinating Dumbbell Curl",
+          "sets": "3x"
+        }
+      ]
+    },
+    "reserve": {
+      "description": "In case miss a day of chest or back",
+      "notes": "If you miss an early back day (Tue), try to run this the very next day (replace Wed core) so back volume doesn't tank.",
+      "exercises": [
+        {
+          "group": "chest",
+          "exercise": "Bench Press",
+          "sets": "4"
+        },
+        {
+          "group": "back",
+          "exercise": "Lat Pulldown",
+          "sets": "3x"
+        },
+        {
+          "group": "back",
+          "exercise": "Seated Cable Row",
+          "sets": "3x"
+        },
+        {
+          "group": "quads",
+          "exercise": "Leg Press",
+          "sets": "3x"
+        },
+        {
+          "group": "hams",
+          "exercise": "Seated Leg Curl",
+          "sets": "4"
+        },
+        {
+          "group": "quads",
+          "exercise": "Leg Extension",
+          "sets": "3x"
+        },
+        {
+          "group": "triceps",
+          "exercise": "Skull Crusher",
+          "sets": "3x",
+          "notes": "EZ-bar or dumbbell"
+        },
+        {
+          "group": "biceps",
+          "exercise": "EZ-Bar Curl",
+          "sets": "3x"
+        },
+        {
+          "group": "shoulders",
+          "exercise": "Lateral Raise",
+          "sets": "3x",
+          "notes": "cable or dumbbells"
+        },
+        {
+          "group": "shoulders",
+          "exercise": "Face Pull",
+          "sets": "3x"
+        },
+        {
+          "group": "calves",
+          "exercise": "Seated Calf Raise",
+          "sets": "3x"
+        }
+      ]
+    }
+  }
+}
