@@ -4,38 +4,45 @@
       "exercises": [
         {
           "group": "chest",
+          "name": "Bench Press",
           "exercise": "Bench Press",
           "sets": "4"
         },
         {
           "group": "chest",
+          "name": "Low Cable Fly",
           "exercise": "Low Cable Fly",
           "sets": "3"
         },
         {
           "group": "hams",
+          "name": "Romanian DL",
           "exercise": "Romanian Deadlift",
           "sets": "4",
-          "notes": "maybe 5x"
+          "notes": "maybe 5"
         },
         {
           "group": "shoulders",
+          "name": "Lateral Raise",
           "exercise": "Lateral Raise",
           "sets": "3",
           "notes": "cable or dumbbells"
         },
         {
           "group": "triceps",
+          "name": "Cable Pushdown",
           "exercise": "Cable Triceps Pushdown",
           "sets": "3"
         },
         {
           "group": "triceps",
+          "name": "Overhead Rope Triceps Exten",
           "exercise": "Overhead Rope Triceps Extension",
           "sets": "3"
         },
         {
           "group": "calves",
+          "name": "Smith Machine Standing Cal",
           "exercise": "Smith Machine Standing Calf Raise",
           "sets": "4"
         }
@@ -45,38 +52,45 @@
       "exercises": [
         {
           "group": "back",
+          "name": "Lat Pulldown",
           "exercise": "Lat Pulldown",
           "sets": "4"
         },
         {
           "group": "back",
+          "name": "Cable Row",
           "exercise": "Seated Cable Row",
-          "sets": "3x"
+          "sets": "3"
         },
         {
           "group": "quads",
+          "name": "45° Leg Press",
           "exercise": "45° Leg Press",
           "sets": "4"
         },
         {
           "group": "shoulders",
+          "name": "Face Pull",
           "exercise": "Face Pull",
-          "sets": "3x"
+          "sets": "3"
         },
         {
           "group": "quads",
+          "name": "Leg Extension",
           "exercise": "Leg Extension",
-          "sets": "3x"
+          "sets": "3"
         },
         {
           "group": "biceps",
+          "name": "EZ-Bar Curl",
           "exercise": "EZ-Bar Curl",
-          "sets": "3x"
+          "sets": "3"
         },
         {
           "group": "biceps",
+          "name": "Hammer Curl",
           "exercise": "Hammer Curl",
-          "sets": "3x"
+          "sets": "3"
         }
       ]
     },
@@ -84,34 +98,42 @@
       "exercises": [
         {
           "group": "core",
+          "name": "Weighted Crunch",
           "exercise": "Weighted Lying Crunch",
-          "sets": "3x",
+          "sets": "3",
           "notes": "arms overhead"
         },
         {
           "group": "core",
+          "name": "Hang Leg Raise",
           "exercise": "Hanging Leg Raise",
-          "sets": "3x"
+          "sets": "3"
         },
         {
           "group": "core",
+          "name": "Side Bend",
           "exercise": "Side Bend",
-          "sets": "2x each side (4x total)"
+          "sets": "2",
+          "notes": "2x each side (4x total)"
         },
         {
           "group": "core",
+          "name": "Cable Rotation",
           "exercise": "Cable Rotation",
-          "sets": "2x each side"
+          "sets": "2",
+          "notes": "2x each side"
         },
         {
           "group": "abd",
+          "name": "Hip Abductor",
           "exercise": "Hip Abductor Machine",
-          "sets": "3x"
+          "sets": "3"
         },
         {
           "group": "add",
+          "name": "Hip Adductor Machine",
           "exercise": "Hip Adductor Machine",
-          "sets": "3x"
+          "sets": "3"
         }
       ]
     },
@@ -119,41 +141,48 @@
       "exercises": [
         {
           "group": "chest",
+          "name": "Bench Press",
           "exercise": "Bench Press",
           "sets": "4"
         },
         {
           "group": "chest",
+          "name": "Incline Press",
           "exercise": "Incline Bench Press",
-          "sets": "3x",
+          "sets": "3",
           "notes": "dumbbell or barbell"
         },
         {
           "group": "hams",
+          "name": "Leg Curl",
           "exercise": "Seated Leg Curl",
           "sets": "4"
         },
         {
           "group": "shoulders",
+          "name": "Lateral Raise",
           "exercise": "Lateral Raise",
-          "sets": "3x",
+          "sets": "3",
           "notes": "cable or dumbbells"
         },
         {
           "group": "triceps",
+          "name": "Skull Crusher",
           "exercise": "Skull Crusher",
-          "sets": "3x",
+          "sets": "3",
           "notes": "EZ-bar or dumbbell"
         },
         {
           "group": "calves",
+          "name": "Calf Raise",
           "exercise": "Seated Calf Raise",
           "sets": "4"
         },
         {
           "group": "shoulders",
+          "name": "Overhead Press",
           "exercise": "Overhead Press",
-          "sets": "3x"
+          "sets": "3"
         }
       ]
     },
@@ -161,34 +190,40 @@
       "exercises": [
         {
           "group": "back",
+          "name": "Lat Pulldown",
           "exercise": "Lat Pulldown",
           "sets": "4"
         },
         {
           "group": "back",
+          "name": "Seated Row",
           "exercise": "Chest-Supported Seated Row",
-          "sets": "3x"
+          "sets": "3"
         },
         {
           "group": "quads",
+          "name": "Leg Press",
           "exercise": "Seated Leg Press",
-          "sets": "3x"
+          "sets": "3"
         },
         {
           "group": "shoulders",
+          "name": "Reverse Fly",
           "exercise": "Reverse Fly",
-          "sets": "3x",
+          "sets": "3",
           "notes": "dumbbell"
         },
         {
           "group": "quads",
+          "name": "Leg Extension",
           "exercise": "Leg Extension",
-          "sets": "3x"
+          "sets": "3"
         },
         {
           "group": "biceps",
+          "name": "Supinating Dumbbell Curl",
           "exercise": "Supinating Dumbbell Curl",
-          "sets": "3x"
+          "sets": "3"
         }
       ]
     },
@@ -198,60 +233,71 @@
       "exercises": [
         {
           "group": "chest",
+          "name": "Bench Press",
           "exercise": "Bench Press",
           "sets": "4"
         },
         {
           "group": "back",
+          "name": "Lat Pulldown",
           "exercise": "Lat Pulldown",
-          "sets": "3x"
+          "sets": "3"
         },
         {
           "group": "back",
+          "name": "Cable Row",
           "exercise": "Seated Cable Row",
-          "sets": "3x"
+          "sets": "3"
         },
         {
           "group": "quads",
-          "exercise": "Leg Press",
-          "sets": "3x"
+          "name": "Leg Press",
+          "exercise": "Seated Leg Press",
+          "sets": "3"
         },
         {
           "group": "hams",
+          "name": "Leg Curl",
           "exercise": "Seated Leg Curl",
           "sets": "4"
         },
         {
           "group": "quads",
+          "name": "Leg Extension",
           "exercise": "Leg Extension",
-          "sets": "3x"
+          "sets": "3"
         },
         {
           "group": "triceps",
+          "name": "Skull Crusher",
           "exercise": "Skull Crusher",
-          "sets": "3x",
+          "sets": "3",
           "notes": "EZ-bar or dumbbell"
         },
         {
           "group": "biceps",
+          "name": "EZ-Bar Curl",
           "exercise": "EZ-Bar Curl",
-          "sets": "3x"
+          "sets": "3"
         },
         {
           "group": "shoulders",
+          "name": "Lateral Raise",
           "exercise": "Lateral Raise",
-          "sets": "3x",
+          "sets": "3",
           "notes": "cable or dumbbells"
         },
         {
           "group": "shoulders",
+          "name": "Face Pull",
           "exercise": "Face Pull",
-          "sets": "3x"
+          "sets": "3"
         },
         {
           "group": "calves",
+          "name": "Calf Raise",
           "exercise": "Seated Calf Raise",
-          "sets": "3x"
+          "sets": "3"
         }
       ]
     }

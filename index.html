@@ -198,14 +198,12 @@
 
         function formatExercise(exercise) {
             const groupAbbrev = getAbbreviation(exercise.group);
-            const sets = exercise.sets.endsWith('x') ? exercise.sets : exercise.sets + 'x';
-            return `<span class="muscle-group">${groupAbbrev}:</span> ${exercise.exercise} <span class="sets">${sets}</span>`;
+            return `<span class="muscle-group">${groupAbbrev}:</span> ${exercise.name} <span class="sets">${exercise.sets}x</span>`;
         }
 
         function formatModalExercise(exercise) {
             const notesText = exercise.notes ? ` (${exercise.notes})` : '';
-            const sets = exercise.sets.endsWith('x') ? exercise.sets : exercise.sets + 'x';
-            return `<span class="muscle-group">${exercise.group}:</span> ${exercise.exercise} <span class="sets">${sets}</span>${notesText}`;
+            return `<span class="muscle-group">${exercise.group}:</span> ${exercise.exercise} <span class="sets">${exercise.sets}x</span>${notesText}`;
         }
 
         function createDayElement(dayKey, dayData) {
