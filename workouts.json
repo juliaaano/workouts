@@ -134,6 +134,12 @@
           "name": "Hip Adductor Machine",
           "exercise": "Hip Adductor Machine",
           "sets": "3"
+        },
+        {
+          "group": "core",
+          "name": "Plank",
+          "exercise": "Plank",
+          "sets": "2"
         }
       ]
     },

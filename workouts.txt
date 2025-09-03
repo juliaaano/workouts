@@ -23,6 +23,7 @@ core: Side Bend 2x each side (4x total)
 core: Cable Rotation 2x each side
 abd: Hip Abductor Machine 3x
 add: Hip Adductor Machine 3x
+core: Plank 2x
 
 THU
 chest: Bench Press 4x
